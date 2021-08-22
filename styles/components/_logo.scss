@@ -1,0 +1,44 @@
+@import '../base/manifest', '../helpers/manifest';
+
+.logo-subtitle {
+  font-size: $sm;
+  line-height: 10px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s;
+  @include mq(lg) {
+    font-size: $text-default-sm;
+  }
+}
+
+.logo-title {
+  transition: all 0.2s;
+  @include mq(lg) {
+    font-size: $text-default-lg;
+  }
+}
+
+.logo-subtitle::before {
+  content: '';
+  width: 15%;
+  height: 1.22px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.logo-subtitle::after {
+  content: '';
+  width: 15%;
+  height: 1.22px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}

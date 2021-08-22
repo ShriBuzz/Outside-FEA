@@ -1,0 +1,35 @@
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin spaceBetweenCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin spaceBetweenBaseline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+@mixin centerBaseline {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,20 @@
+@import './base/manifest';
+@import './components/manifest';
+@import './helpers/manifest';
+@import './section/manifest';
+@import '../node_modules/bootstrap-scss/bootstrap';
+@import '../node_modules/bootstrap-scss/functions';
+
+$custom-colors: (
+  $primary: #efe1d4,
+  $secondary: #ffd7b4,
+  $green: #c3c3b3,
+  $pink: #e1cecc,
+);
+
+$grid-gutter-width: 32px;
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import '../node_modules/bootstrap-scss/variables';
+@import '../node_modules/bootstrap-scss/mixins';

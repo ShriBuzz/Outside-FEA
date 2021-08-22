@@ -1,0 +1,47 @@
+@import './typography';
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: bolder !important;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-style: none;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

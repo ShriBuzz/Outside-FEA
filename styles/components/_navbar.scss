@@ -1,0 +1,53 @@
+@import '../base/manifest', '../helpers/manifest';
+
+.gutter-x {
+  padding: 0 32px !important;
+  @include mq(xl) {
+    padding: 0 120px !important;
+  }
+}
+
+.nav-collapse-open {
+  transition: all 0.2s;
+  background-color: $secondary;
+}
+
+.nav-menu {
+  margin-left: 32px;
+  border: none !important;
+}
+
+.nav-group {
+  display: flex;
+  flex: 1;
+  @include mq(lg) {
+    // flex: 0;
+  }
+}
+
+.navbar-collapse,
+#navbarText {
+  height: 100vh;
+  @include mq(lg) {
+    height: 0;
+    display: none !important;
+  }
+}
+
+.nav-subgroup {
+  display: none;
+  @include mq(lg) {
+    display: flex;
+    font-size: $text-default-lg;
+    margin-left: 70px;
+    row-gap: 40px;
+  }
+}
+
+.nav-action {
+  font-size: $text-sm;
+  font-family: 'sunset-gothic-bold-pro';
+  @include mq(lg) {
+    font-size: $text-default-sm;
+  }
+}
