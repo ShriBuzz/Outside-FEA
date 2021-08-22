@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUTSIDE</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="styles/swiper-bundle.min.css"
+    />
 
     <!--==================== BOOTSTRAP JS ====================-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -33,35 +38,118 @@
                 <div class="nav-subgroup">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Learn</a>
+                        <a class="nav-link" aria-current="page" href="#">Learn</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link active" href="#">Connect</a>
+                        <a class="nav-link" href="#">Connect</a>
                     </li>
                     </ul>                    
-                </div>          
+                </div>      
             </div>
             <span class="nav-action">
                 Join US
             </span>            
             <button class="navbar-toggler nav-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--==================== HAMBURGER MENU CONTENT ====================-->
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Learn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Connect</a>
-                    </li>
-                    </ul>
-              </div>
+            </button>            
+        </div>
+        <!--==================== HAMBURGER MENU CONTENT ====================-->
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav nav-listing me-auto mb-2 mb-lg-0 gutter-x">
+                <li class="nav-item">
+                    <span class="d-flex align-items-center">
+                        <a class="nav-link nav-title active" aria-current="page" href="#">Learn</a>
+                        <img class="arrow-icon" src="./assets/icons/arrow.png"/>
+                    </span>
+                    <div class="nav-sublist">
+                        <a class="nav-subtitle">Food</a>
+                        <a class="nav-subtitle">Butter</a>
+                        <a class="nav-subtitle">Cosmetics</a>
+                        <a class="nav-subtitle">Sustainability</a>
+                        <a class="nav-subtitle">Kernels</a>
+                        <a class="nav-subtitle">Industry</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <span class="d-flex align-items-center">
+                        <a class="nav-link nav-title active" href="#">Connect</a>
+                        <img class="arrow-icon" src="./assets/icons/arrow.png"/>
+                    </span>
+                    <div class="nav-sublist">
+                        <a class="nav-subtitle">Suppliers</a>
+                        <a class="nav-subtitle">Affiliate members</a>
+                        <a class="nav-subtitle">Brands & retailers</a>
+                        <a class="nav-subtitle">Producer National Associations</a>
+                        <a class="nav-subtitle">Non Profits</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="lang-container">
+                Select language: <span class="lang active">EN</span> <span class="lang">FR</span>
+            </div>
         </div>
     </nav>
 
+    <section class="hero-section gutter-x">
+        <div class="hero-slider-text-container">
+            <ul class="hero-slider-nav">
+                <li class="active">Natural</li>
+                <li>Sustainable</li>
+                <li>Ethical</li>
+            </ul>
+             <!-- Swiper -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1 class="hero-text">
+                            ONE TREE INFINITE OPPORTUNITIES
+                        </h1>
+                        <span class="hero-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1 class="hero-text">
+                            TWO TREE INFINITE OPPORTUNITIES
+                        </h1>
+                        <span class="hero-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        </span>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1 class="hero-text">
+                            THREE TREE INFINITE OPPORTUNITIES
+                        </h1>
+                        <span class="hero-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        </span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>            
+        </div>
+        <div class="hero-slider-img-container">
+            <img class="hero-slider-img" src="./assets/images/Hero1.png"/>
+        </div>
+    </section>
+
     <!--==================== MAIN JS ====================-->
     <script src="js/main.js"></script>
+    <!--==================== Swiper JS ====================-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+        var swiper = new Swiper(".mySwiper", {
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
 </body>
 </html>
