@@ -7,6 +7,13 @@
   }
 }
 
+.navbar {
+  background-color: $primary;
+  position: sticky !important;
+  top: 0;
+  z-index: 99;
+}
+
 .nav-collapse-open {
   transition: all 0.2s;
   background-color: $secondary;
@@ -20,14 +27,27 @@
 .nav-group {
   display: flex;
   flex: 1;
-  @include mq(lg) {
-    // flex: 0;
-  }
+  position: relative;
+}
+
+.navbar-expand-lg {
+  flex-wrap: wrap !important;
 }
 
 .navbar-collapse,
 #navbarText {
-  height: 100vh;
+  height: calc(100vh - 49.2px - 0.5rem);
+  .lang-container {
+    display: flex;
+    background-color: $primary;
+    padding: 34.5px 32px;
+    color: $offblack;
+    font-size: $text-default-sm;
+    .lang {
+      font-size: $md;
+      padding: 0 12px;
+    }
+  }
   @include mq(lg) {
     height: 0;
     display: none !important;
@@ -47,7 +67,44 @@
 .nav-action {
   font-size: $text-sm;
   font-family: 'sunset-gothic-bold-pro';
+  cursor: pointer;
   @include mq(lg) {
     font-size: $text-default-sm;
   }
+}
+
+.nav-listing {
+  height: calc(100% - 95.4px - 0.5rem);
+  .nav-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    .nav-title {
+      font-size: $nav-sm;
+    }
+    .arrow-icon {
+      width: 23px;
+      height: 20px;
+      margin-left: 4px;
+    }
+    .nav-sublist {
+      width: 100%;
+      .nav-subtitle {
+        display: inline-flex;
+        width: 49%;
+        font-family: 'sunset-gothic-bold-pro';
+        font-size: $text-sm;
+        color: black;
+        text-decoration: none;
+        padding: 12px 24px 12px 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .nav-item:nth-child(1) {
+    margin-top: 14%;
+  }
+}
+
+.learn-nav-collapse {
+  width: 100%;
 }
