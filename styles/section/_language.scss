@@ -1,0 +1,38 @@
+@import '../base/manifest', '../helpers/manifest';
+
+.language-section {
+  display: none;
+  @include mq(lg) {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $secondary;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    .lang-container {
+      display: flex;
+      align-items: center;
+      color: $offblack;
+      font-size: $text-md;
+      .lang {
+        font-family: 'sunset-gothic-bold-pro';
+        font-size: $text-default-sm;
+        padding: 0 12px;
+        opacity: 0.2;
+        position: relative;
+        cursor: pointer;
+      }
+      .lang:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $offblack;
+        opacity: 0.5;
+      }
+      .active {
+        opacity: 1;
+      }
+    }
+  }
+}

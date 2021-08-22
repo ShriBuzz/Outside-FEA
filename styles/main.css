@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: 'sunset-gothic-bold-pro';
   src: url("../../assets/fonts/sunset-gothic-bold-pro.eot");
@@ -458,6 +459,110 @@ input[type='number'] {
 @media (min-width: 992px) {
   .nav-action {
     font-size: 16px;
+  }
+}
+
+@font-face {
+  font-family: 'sunset-gothic-bold-pro';
+  src: url("../../assets/fonts/sunset-gothic-bold-pro.eot");
+  src: url("../../assets/fonts/sunset-gothic-bold-pro.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/sunset-gothic-bold-pro.woff2") format("woff2"), url("../../assets/fonts/sunset-gothic-bold-pro.woff") format("woff"), url("../../assets/fonts/sunset-gothic-bold-pro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: bolder !important;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-style: none;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.language-section {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .language-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #ffd7b4;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  .language-section .lang-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #474952;
+    font-size: 20px;
+  }
+  .language-section .lang-container .lang {
+    font-family: 'sunset-gothic-bold-pro';
+    font-size: 16px;
+    padding: 0 12px;
+    opacity: 0.2;
+    position: relative;
+    cursor: pointer;
+  }
+  .language-section .lang-container .lang:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #474952;
+    opacity: 0.5;
+  }
+  .language-section .lang-container .active {
+    opacity: 1;
   }
 }
 
