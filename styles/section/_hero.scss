@@ -1,0 +1,78 @@
+.hero-section {
+  height: max-content;
+  background-color: $primary;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 38px;
+  padding-top: 63px !important;
+  padding-bottom: 56px !important;
+  overflow: hidden;
+
+  @include mq(lg) {
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 120px !important;
+  }
+
+  .hero-slider-text-container {
+    width: 85vw;
+    @include mq(lg) {
+      width: 50vw;
+    }
+    .hero-slider-nav {
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      grid-gap: 33px;
+      padding: 0;
+      li {
+        font-size: $text-default-sm;
+        opacity: 0.2;
+        @include mq(xl) {
+          font-size: $text-default-lg;
+        }
+      }
+      .active {
+        opacity: 1;
+      }
+    }
+
+    .hero-description {
+      font-size: $text-default-sm;
+      @include mq(xl) {
+        font-size: $text-default-lg;
+      }
+    }
+  }
+
+  .hero-slider-img-container {
+    display: flex;
+    justify-content: flex-end;
+    @include mq(lg) {
+      justify-content: baseline;
+    }
+    .hero-slider-img {
+      width: 200px;
+      height: 270px;
+      object-fit: contain;
+      @include mq(lg) {
+        width: 330px;
+        height: 100%;
+      }
+      @include mq(xl) {
+        width: 465px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: $h1-sm !important;
+  font-family: 'sunset-gothic-bold-pro';
+  transition: all 0.2s;
+  @include mq(lg) {
+    font-size: $h2-lg !important;
+  }
+  @include mq(xl) {
+    font-size: $h1-lg !important;
+  }
+}
