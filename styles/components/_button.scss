@@ -1,29 +1,46 @@
-@import "../helpers/variables";
+@import '../base/manifest', '../helpers/manifest';
 
-button {
-  color: white;
-  font-size: $sm;
+.primary-button {
+  font-size: $text-default-sm;
   cursor: pointer;
-  transition: 0.5s;
-  border-radius: $radius;
-  background-color: $secondary;
+  transition: 0.3s;
+  background-color: $primary;
+  height: 48px;
+  padding: 16px 24px 13px;
+  margin-top: 16px;
+  .arrow-icon {
+    height: 12px;
+    object-fit: contain;
+    margin-left: 4px;
+    path {
+      transition: 0.3s;
+      fill: black !important;
+    }
+  }
+  @include flexCenter();
+  @include mq(md) {
+    height: 52px;
+    font-size: $text-md;
+    margin-top: 24px;
+  }
+  @include mq(lg) {
+    height: 64px;
+    font-size: $text-default-lg;
+    padding: 17px 32px 15px;
+    margin-top: 32px;
+    .arrow-icon {
+      height: 18px;
+      margin-left: 6px;
+    }
+  }
 }
 
-button:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(245, 154, 35, 0.4);
-}
-
-.button-secondary {
-  font-size: $sm;
+.primary-button:hover {
   color: $primary;
-  cursor: pointer;
-  transition: 0.5s;
-  border-radius: $radius;
-  background-color: $light-grey;
-}
-
-.button-secondary:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(201, 200, 200, 0.5);
+  background-color: black;
+  .arrow-icon {
+    path {
+      fill: $primary !important;
+    }
+  }
 }
