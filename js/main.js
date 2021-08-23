@@ -21,3 +21,14 @@ navToggle.addEventListener('click', function () {
     navBar.classList.remove('nav-collapse-open');
   } else navBar.classList.add('nav-collapse-open');
 });
+
+var distance = $('.navbar').offset().top,
+  $window = $(window);
+
+$window.scroll(function () {
+  if ($window.scrollTop() >= distance) {
+    $('.navbar').addClass('nav-collapse-open');
+  } else {
+    $('.navbar').removeClass('nav-collapse-open');
+  }
+});
