@@ -1,0 +1,126 @@
+h1 {
+  font-size: $h1-sm !important;
+  @include sunsetFontCaps();
+  line-height: 33px !important;
+  margin-bottom: 16px !important;
+  @include mq(lg) {
+    font-size: $h2-lg !important;
+    margin-bottom: 40px !important;
+    line-height: 75px !important;
+  }
+  @include mq(xl) {
+    font-size: $h1-lg !important;
+  }
+}
+
+h2 {
+  font-size: $h2-sm !important;
+  @include sunsetFontCaps();
+  line-height: 22px !important;
+  margin-bottom: 12px !important;
+  @include mq(lg) {
+    font-size: $xl !important;
+    line-height: 40px !important;
+    margin-bottom: 24px !important;
+  }
+  @include mq(xl) {
+    font-size: $h2-lg !important;
+    line-height: 57px !important;
+  }
+}
+
+h3 {
+  font-size: $text-sm !important;
+  @include sunsetFontCaps();
+  line-height: 13px !important;
+  margin-bottom: 4px !important;
+  @include mq(lg) {
+    font-size: 28px !important;
+    line-height: 25px !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+.description {
+  font-size: $text-default-sm;
+  margin: 0;
+  @include mq(lg) {
+    font-size: $text-md;
+  }
+  @include mq(xl) {
+    font-size: $text-default-lg;
+  }
+}
+
+.section-grid {
+  height: max-content;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    align-items: center;
+    .image-container {
+      width: 257px;
+      height: 193px;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+  }
+  @include mq(md) {
+    .content-section {
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 60px;
+      .image-container {
+        width: 400px;
+        height: 400px;
+        transition: all 0.3s;
+        .image {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  @include mq(lg) {
+    .content-section {
+      .image-container {
+        width: 470px;
+        height: 470px;
+        .image {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  @include mq(xl) {
+    .content-section {
+      .image-container {
+        width: 570px;
+        height: 570px;
+      }
+    }
+  }
+}
+
+.background-text {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  @include flexCenter();
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-family: 'sunset-gothic-bold-pro';
+  opacity: 0.4;
+}
