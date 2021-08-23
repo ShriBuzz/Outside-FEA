@@ -207,9 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-              </div>
+            </div>
         </div>
     </section>
 
@@ -232,6 +230,118 @@
                 <img src="./assets/images/Last.png" alt="globe" class="image">
             </div>            
         </div>
+        <div class="cards-container">
+            <p class="card-title">Categories</p>
+            <div class="swiper-container cardSwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Food</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card1.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Butter</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card2.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Cosmetics</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card3.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Sustainability</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card4.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Industry</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card1.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide card-view">
+                        <div class="card-text-container">
+                            <h3 class="card-text">Kernels</h3>
+                            <p class="description">123 members</p>
+                        </div>
+                        <div class="card-image-container">
+                            <img src="./assets/images/categories/card3.png" alt="card image" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <p class="card-title">Featured Resources</p>
+            <!-- Swiper -->
+            <div class="swiper-container cardSwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide card-view-secondary">
+                    <div class="card-image-container card-image-container-border">
+                        <img src="./assets/images/featured/feat1.png" alt="card image" class="card-image">
+                    </div>
+                    <div class="card-sec-text-container">
+                        <div class="card-info-container">
+                            <span class="tag">industry</span>
+                            <span class="time-ago">1 day ago</span>
+                        </div>
+                        <p class="description">
+                            VP Bawumia launches Parkland Restoration Fund to protect shea parklands
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide card-view-secondary empty-card-view">
+                    <div class="empty-image-container">
+                    </div>
+                    <div class="card-sec-text-container">
+                        <div class="card-info-container">
+                            <span class="tag">food</span>
+                            <span class="time-ago">3 days ago</span>
+                        </div>
+                        <p class="description-lg">
+                            Newly Permitted Food Ingredients Create Largest Shea Market in the U.S. & Grow West African Exports
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide card-view-secondary">
+                    <div class="card-image-container card-image-container-border">
+                        <img src="./assets/images/featured/feat2.png" alt="card image" class="card-image">
+                    </div>
+                    <div class="card-sec-text-container">
+                        <div class="card-info-container">
+                            <span class="tag">cosmetics</span>
+                            <span class="time-ago">1 week ago</span>
+                        </div>
+                        <p class="description">
+                            The Estée Lauder Companies Inc. joins the Global Shea Alliance
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!--==================== MAIN JS ====================-->
@@ -242,6 +352,7 @@
      <!-- Initialize Swiper -->
      <script>
         var swiper = new Swiper(".mySwiper", {
+          loop: true,
           autoplay: {
             delay: 4000,
             disableOnInteraction: true,
@@ -253,19 +364,17 @@
         });
 
         var swiper = new Swiper(".cardSwiper", {
-            slidesPerView: 3,
             spaceBetween: 60,
-            grabCursor: true,
+            slidesPerView: 'auto',
+            loopedSlides: 2,
             freeMode: true,
             breakpoints: {
                 // when window width is >= 320px
                 320: {
-                slidesPerView: 2,
                 spaceBetween: 16
                 },
                 // when window width is >= 480px
                 480: {
-                slidesPerView: 3,
                 spaceBetween: 30
                 },
             }

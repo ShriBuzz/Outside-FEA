@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
 @font-face {
   font-family: 'sunset-gothic-bold-pro';
   src: url("../../assets/fonts/sunset-gothic-bold-pro.eot");
@@ -21,8 +27,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -78,8 +84,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -198,8 +204,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -240,6 +246,7 @@ input[type='number'] {
 
 .logo-subtitle {
   font-size: 14px;
+  font-weight: 800;
   line-height: 10px;
   position: relative;
   width: 100%;
@@ -257,6 +264,7 @@ input[type='number'] {
 .logo-title {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  font-weight: 800;
 }
 
 @media (min-width: 992px) {
@@ -342,8 +350,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -404,6 +412,7 @@ input[type='number'] {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   background-color: #ffd7b4;
+  padding-bottom: 0;
 }
 
 .nav-menu {
@@ -544,8 +553,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -646,13 +655,20 @@ input[type='number'] {
   }
 }
 
+.cardSwiper {
+  overflow: visible !important;
+}
+
 .card-title {
   font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px !important;
 }
 
 @media (min-width: 992px) {
   .card-title {
     font-size: 47px;
+    margin-bottom: 48px !important;
   }
 }
 
@@ -667,11 +683,80 @@ input[type='number'] {
   background-color: #efe1d4;
 }
 
+@media (min-width: 768px) {
+  .card-view {
+    width: 30.5% !important;
+    height: 39vh !important;
+  }
+}
+
 @media (min-width: 992px) {
   .card-view {
-    width: 360px !important;
-    height: 404px !important;
+    width: 31.5% !important;
+    height: 55vh !important;
   }
+}
+
+@media (min-width: 1200px) {
+  .card-view {
+    width: 31.8% !important;
+    height: 59vh !important;
+  }
+}
+
+.empty-card-view {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.1fr !important;
+      grid-template-rows: 0.1fr !important;
+}
+
+.empty-card-view .empty-image-container {
+  border-top: 10px solid;
+}
+
+.card-view-secondary {
+  width: 202px !important;
+  height: 196px !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1.5fr 1fr;
+      grid-template-rows: 1.5fr 1fr;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .card-view-secondary {
+    width: 30.5% !important;
+    height: 39vh !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-view-secondary {
+    width: 31.5% !important;
+    height: 55vh !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-view-secondary {
+    width: 31.8% !important;
+    height: 59vh !important;
+  }
+}
+
+.card-view-secondary:hover .empty-image-container {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-top: 10px solid #efe1d4;
+}
+
+.card-view-secondary:hover .card-image-container {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 12px solid #efe1d4;
 }
 
 .card-view:hover {
@@ -704,11 +789,59 @@ input[type='number'] {
 }
 
 .card-image-container .card-image {
+  width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: fill;
+     object-fit: fill;
   -o-object-position: left bottom;
      object-position: left bottom;
+}
+
+.card-image-container-border {
+  border: 12px solid black;
+}
+
+.card-info-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  grid-gap: 8px;
+  margin-top: 8px;
+}
+
+.card-info-container .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #efe1d4;
+  padding: 4px 4px 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  height: 14px;
+}
+
+.card-info-container .time-ago {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .card-info-container {
+    grid-gap: 12px;
+    margin-top: 16px;
+  }
+  .card-info-container .tag {
+    padding: 6px 6px 4px;
+    font-size: 14px;
+    height: 21px;
+  }
 }
 
 @font-face {
@@ -728,8 +861,8 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif !important;
-  font-weight: bolder !important;
+  font-family: 'EB Garamond', serif !important;
+  font-weight: 400 !important;
   position: relative;
 }
 
@@ -986,6 +1119,7 @@ h1, .h1 {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-transform: uppercase;
+  color: #000;
   line-height: 33px !important;
   margin-bottom: 16px !important;
 }
@@ -1010,6 +1144,7 @@ h2, .h2 {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-transform: uppercase;
+  color: #000;
   line-height: 22px !important;
   margin-bottom: 12px !important;
 }
@@ -1035,6 +1170,7 @@ h3, .h3 {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-transform: uppercase;
+  color: #000;
   line-height: 13px !important;
   margin-bottom: 4px !important;
 }
@@ -1061,6 +1197,19 @@ h3, .h3 {
 @media (min-width: 1200px) {
   .description {
     font-size: 27px;
+  }
+}
+
+.description-lg {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .description-lg {
+    font-size: 47px;
+    line-height: 47px;
   }
 }
 
