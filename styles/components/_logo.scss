@@ -2,6 +2,7 @@
 
 .logo-subtitle {
   font-size: $sm;
+  font-weight: 800;
   line-height: 10px;
   position: relative;
   width: 100%;
@@ -14,6 +15,7 @@
 
 .logo-title {
   transition: all 0.2s;
+  font-weight: 800;
   @include mq(lg) {
     font-size: $text-default-lg;
   }
