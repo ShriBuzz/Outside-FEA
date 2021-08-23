@@ -1,0 +1,42 @@
+.mid-section {
+  padding: 106px 32px 56px 32px;
+  background-color: $green;
+  .mid-watermark-position {
+    top: 56px;
+    left: 42px;
+    color: $primary;
+    font-size: 18.5vw;
+    height: 58px;
+  }
+  @include mq(md) {
+    padding: 178px 32px 56px 32px;
+    .mid-watermark-position {
+      top: 6vh;
+      left: 42px;
+      height: 205px;
+    }
+  }
+  @include mq(lg) {
+    .mid-watermark-position {
+      left: 154px;
+      height: 205px;
+    }
+  }
+  @include mq(xl) {
+    padding: 280px 120px 120px 120px;
+    .mid-watermark-position {
+      top: 18vh;
+    }
+  }
+}
+
+.mid-cards-container {
+  margin-top: 56px;
+  border-top: 8px solid $primary;
+  padding-top: 18px;
+  @include mq(lg) {
+    margin-top: 120px;
+    border-top: 10px solid $primary;
+    padding-top: 40px;
+  }
+}
