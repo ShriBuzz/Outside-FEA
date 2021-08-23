@@ -7,16 +7,19 @@
   padding-top: 63px !important;
   padding-bottom: 56px !important;
   overflow: hidden;
+  position: relative;
 
-  @include mq(lg) {
+  @include mq(md) {
     grid-template-columns: 2fr 1fr;
     padding-bottom: 120px !important;
   }
 
   .hero-slider-text-container {
     width: 85vw;
-    @include mq(lg) {
+    padding-top: 0;
+    @include mq(md) {
       width: 50vw;
+      padding-top: 20px;
     }
     .hero-slider-nav {
       display: grid;
@@ -34,25 +37,22 @@
         opacity: 1;
       }
     }
-
-    .hero-description {
-      font-size: $text-default-sm;
-      @include mq(xl) {
-        font-size: $text-default-lg;
-      }
-    }
   }
 
   .hero-slider-img-container {
     display: flex;
     justify-content: flex-end;
-    @include mq(lg) {
+    @include mq(md) {
       justify-content: baseline;
     }
     .hero-slider-img {
       width: 200px;
       height: 270px;
       object-fit: contain;
+      @include mq(md) {
+        width: 280px;
+        height: 100%;
+      }
       @include mq(lg) {
         width: 330px;
         height: 100%;
@@ -62,17 +62,5 @@
         height: 100%;
       }
     }
-  }
-}
-
-h1 {
-  font-size: $h1-sm !important;
-  font-family: 'sunset-gothic-bold-pro';
-  transition: all 0.2s;
-  @include mq(lg) {
-    font-size: $h2-lg !important;
-  }
-  @include mq(xl) {
-    font-size: $h1-lg !important;
   }
 }
