@@ -9,6 +9,12 @@
   justify-content: center;
 }
 
+@mixin sunsetFontCaps {
+  font-family: 'sunset-gothic-bold-pro';
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
 @mixin spaceBetweenCenter {
   display: flex;
   align-items: center;
