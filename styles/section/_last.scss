@@ -1,0 +1,57 @@
+.last-section {
+  padding: 125px 32px 56px 32px;
+  background-color: $pink;
+  .last-watermark-position {
+    top: 56px;
+    left: -14px;
+    color: $primary;
+    font-size: 27vw;
+    height: 73px;
+  }
+  .last-content-section {
+    .last-text-container {
+      order: 2;
+      width: 257px;
+      margin-left: auto;
+    }
+    .last-image-container {
+      order: 1;
+      margin-left: auto;
+    }
+  }
+  @include mq(md) {
+    padding: 178px 32px 56px 32px;
+    .last-content-section {
+      grid-template-columns: 2fr 1fr;
+      .last-text-container {
+        order: 1;
+        width: auto;
+      }
+      .last-image-container {
+        order: 2;
+      }
+    }
+    .last-watermark-position {
+      top: 15vh;
+      left: -35px;
+      height: 175px;
+    }
+  }
+  @include mq(xl) {
+    padding: 280px 120px 120px 120px;
+    .last-watermark-position {
+      height: 285px;
+    }
+  }
+}
+
+.last-cards-container {
+  margin-top: 56px;
+  border-top: 8px solid $primary;
+  padding-top: 18px;
+  @include mq(lg) {
+    margin-top: 120px;
+    border-top: 10px solid $primary;
+    padding-top: 40px;
+  }
+}
