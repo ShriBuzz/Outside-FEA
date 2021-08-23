@@ -52,6 +52,16 @@ h3 {
   }
 }
 
+.description-lg {
+  font-size: $title-sm;
+  line-height: $title-sm;
+  margin: 0;
+  @include mq(lg) {
+    font-size: $title-lg;
+    line-height: $title-lg;
+  }
+}
+
 .section-grid {
   height: max-content;
   position: relative;
