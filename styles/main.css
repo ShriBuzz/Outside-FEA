@@ -1387,6 +1387,21 @@ h3, .h3 {
   opacity: 0.4;
 }
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #e1cecc;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffd7b4;
+}
+
 .last-section {
   padding: 125px 32px 56px 32px;
   background-color: #e1cecc;
