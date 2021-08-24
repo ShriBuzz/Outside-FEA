@@ -629,7 +629,7 @@ input[type='number'] {
   .swiper-container-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: 46% !important;
+    bottom: 41% !important;
   }
 }
 
@@ -637,7 +637,15 @@ input[type='number'] {
   .swiper-container-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: 18% !important;
+    bottom: 14% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 26% !important;
   }
 }
 

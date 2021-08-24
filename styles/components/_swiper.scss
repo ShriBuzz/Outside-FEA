@@ -21,12 +21,12 @@
 .swiper-pagination-fraction {
   bottom: 50px !important;
   @include mq(md) {
-    bottom: 46% !important;
+    bottom: 41% !important;
   }
   @include mq(lg) {
-    bottom: 18% !important;
+    bottom: 14% !important;
   }
-  // @include mq(xl) {
-  //   bottom: 22% !important;
-  // }
+  @include mq(xl) {
+    bottom: 26% !important;
+  }
 }
