@@ -1,5 +1,9 @@
 # OUTSIDE FEA
 
+## DEMO
+
+[View Demo](https://outsidetech.netlify.app/)
+
 ## Screenshots
 
 ### Laptop View
