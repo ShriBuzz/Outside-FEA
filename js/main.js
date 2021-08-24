@@ -1,7 +1,4 @@
 // navbar logics
-const navBar = document.querySelector('.navbar');
-const navToggle = document.querySelector('.nav-menu');
-const navCollapse = document.querySelector('.navbar-collapse');
 
 var distance = $('.navbar').offset().top,
   $window = $(window);
@@ -62,6 +59,8 @@ $('#Learn').click(function () {
 function toggleNavAnimation(tween) {
   tween.reversed() ? tween.play() : tween.reverse();
 }
+
+// gsap animations
 
 gsap.registerPlugin(ScrollTrigger);
 
