@@ -17,6 +17,7 @@
   .hero-slider-text-container {
     width: 85vw;
     padding-top: 0;
+    opacity: 0;
     @include mq(md) {
       width: 50vw;
       padding-top: 20px;
@@ -42,6 +43,7 @@
   .hero-slider-img-container {
     display: flex;
     justify-content: flex-end;
+    opacity: 0;
     @include mq(md) {
       justify-content: baseline;
     }
