@@ -41,6 +41,14 @@ h3 {
   }
 }
 
+.active {
+  opacity: 1 !important;
+}
+
+.borderBottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .description {
   font-size: $text-default-sm;
   color: $black;
