@@ -17,7 +17,10 @@
 .nav-collapse-open {
   transition: all 0.4s;
   background-color: $secondary;
-  padding-bottom: 0;
+}
+
+.nav-padding-remove {
+  padding-bottom: 0 !important;
 }
 
 .nav-menu {
@@ -37,7 +40,6 @@
 
 .navbar-collapse,
 #navbarText {
-  height: calc(100vh - 49.2px - 0.5rem);
   .lang-container {
     display: flex;
     background-color: $primary;
@@ -74,8 +76,12 @@
   }
 }
 
+.nav-item {
+  cursor: pointer;
+}
+
 .nav-listing {
-  height: calc(100% - 95.4px - 0.5rem);
+  margin-top: 8%;
   .nav-item {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 20px;
@@ -100,9 +106,6 @@
         text-transform: uppercase;
       }
     }
-  }
-  .nav-item:nth-child(1) {
-    margin-top: 14%;
   }
 }
 
