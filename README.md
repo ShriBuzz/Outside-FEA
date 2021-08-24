@@ -2,7 +2,7 @@
 
 ## DEMO
 
-[View Demo](https://outsidetech.netlify.app/)
+[View Demo](https://outsidetech.netlify.app/){:target="_blank" rel="noopener"}
 
 ## Screenshots
 
