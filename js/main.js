@@ -34,53 +34,115 @@ $window.scroll(function () {
 
 let hoverToggle = false;
 
+var tl = gsap.timeline({ paused: true, reversed: true });
+
+tl.fromTo(
+  '#hoverNav',
+  {
+    duration: 1,
+    y: -100,
+    opacity: 0,
+    ease: Power2.easeOut,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    pointerEvents: 'auto',
+  }
+);
+
 $('#Learn').click(function () {
   $('.language-section').toggleClass('borderBottom');
   $('.navbar').toggleClass('nav-collapse-open');
   $('#Learn').children().toggleClass('active');
-  $('#hoverNav').toggleClass('hover-active');
+
+  toggleNavAnimation(tl);
 });
+
+function toggleNavAnimation(tween) {
+  tween.reversed() ? tween.play() : tween.reverse();
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-  paused: true,
-  defaults: { duration: 0.3 },
+let heroAnimation = gsap.from('.hero-slider-img-container', {
+  duration: 1,
+  x: '40vw',
+  opacity: 1,
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: '.hero-slider-img-container',
+    start: 'top 65%',
+    end: 'bottom 25%',
+  },
 });
 
-tl.to('.hero-slider-text-container', {
-  opacity: 0,
-})
-  .to('.hero-slider-text-container', { opacity: 1 })
-  .to('.hero-slider-img-container', {
-    opacity: 0,
-  })
-  .to('.hero-slider-img-container', { opacity: 1 });
-
-$(document).ready(function () {
-  tl.play();
-});
-
-let tl1 = gsap.from('.mid-image-container', {
+let midImageAnimation = gsap.from('.mid-image-container', {
   duration: 1,
   x: '-40vw',
   ease: Power1.easeOut,
   scrollTrigger: {
     trigger: '.mid-image-container',
-    markers: true,
     start: 'top 65%',
     end: 'bottom 25%',
   },
 });
 
-let tl2 = gsap.from('.last-image-container', {
+let midTextAnimation = gsap.from('.mid-text-container', {
+  duration: 1,
+  x: '40vw',
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: '.mid-image-container',
+    start: 'top 65%',
+    end: 'bottom 25%',
+  },
+});
+
+let lastImageAnimation = gsap.from('.last-image-container', {
   duration: 1,
   x: '40vw',
   ease: Power1.easeOut,
   scrollTrigger: {
     trigger: '.last-image-container',
-    markers: true,
     start: 'top 65%',
     end: 'bottom 25%',
   },
+});
+
+let lastTextAnimation = gsap.from('.last-text-container', {
+  duration: 1,
+  x: '-40vw',
+  ease: Power1.easeOut,
+  scrollTrigger: {
+    trigger: '.last-image-container',
+    start: 'top 65%',
+    end: 'bottom 25%',
+  },
+});
+
+const cardTitle = gsap.utils.toArray('.card-title');
+cardTitle.forEach((box) => {
+  gsap.from(box, {
+    x: '-20vw',
+    ease: Power1.easeOut,
+    scrollTrigger: {
+      trigger: box,
+      start: 'top 75%',
+      end: 'bottom 25%',
+    },
+  });
+});
+
+const cardContainers = gsap.utils.toArray('.cardSwiper');
+cardContainers.forEach((container) => {
+  gsap.from(container, {
+    x: '20vw',
+    ease: Power1.easeOut,
+    scrollTrigger: {
+      trigger: container,
+      start: 'top 75%',
+      end: 'bottom 25%',
+    },
+  });
 });

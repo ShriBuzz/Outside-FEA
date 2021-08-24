@@ -641,14 +641,6 @@ input[type='number'] {
   }
 }
 
-@media (min-width: 1200px) {
-  .swiper-container-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: 22% !important;
-  }
-}
-
 .cards-container {
   margin-top: 56px;
   border-top: 8px solid #efe1d4;
@@ -1043,7 +1035,6 @@ input[type='number'] {
 .hero-section .hero-slider-text-container {
   width: 85vw;
   padding-top: 0;
-  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -1085,7 +1076,6 @@ input[type='number'] {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -1486,7 +1476,10 @@ h3, .h3 {
     z-index: 11;
     height: 100vh;
     background-color: rgba(239, 225, 212, 0.4);
-    display: none;
+    display: -ms-grid;
+    display: grid;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 

@@ -7,7 +7,9 @@
     z-index: 11;
     height: 100vh;
     background-color: rgba(239, 225, 212, 0.4);
-    display: none;
+    display: grid;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 .hover-active {
