@@ -40,3 +40,47 @@ $('#Learn').click(function () {
   $('#Learn').children().toggleClass('active');
   $('#hoverNav').toggleClass('hover-active');
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+  paused: true,
+  defaults: { duration: 0.3 },
+});
+
+tl.to('.hero-slider-text-container', {
+  opacity: 0,
+})
+  .to('.hero-slider-text-container', { opacity: 1 })
+  .to('.hero-slider-img-container', {
+    opacity: 0,
+  })
+  .to('.hero-slider-img-container', { opacity: 1 });
+
+$(document).ready(function () {
+  tl.play();
+});
+
+let tl1 = gsap.from('.mid-image-container', {
+  duration: 1,
+  x: '-40vw',
+  ease: 'linear',
+  scrollTrigger: {
+    trigger: '.mid-image-container',
+    markers: true,
+    start: 'top 65%',
+    end: 'bottom 25%',
+  },
+});
+
+let tl2 = gsap.from('.last-image-container', {
+  duration: 1,
+  x: '40vw',
+  ease: 'linear',
+  scrollTrigger: {
+    trigger: '.last-image-container',
+    markers: true,
+    start: 'top 65%',
+    end: 'bottom 25%',
+  },
+});

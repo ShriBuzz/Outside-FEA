@@ -1043,6 +1043,7 @@ input[type='number'] {
 .hero-section .hero-slider-text-container {
   width: 85vw;
   padding-top: 0;
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -1084,6 +1085,7 @@ input[type='number'] {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
