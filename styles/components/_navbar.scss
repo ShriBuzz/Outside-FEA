@@ -67,7 +67,7 @@
 
 .nav-action {
   font-size: $text-sm;
-  font-family: 'sunset-gothic-bold-pro';
+  @include sunsetFontCaps();
   cursor: pointer;
   @include mq(lg) {
     font-size: $text-default-sm;
