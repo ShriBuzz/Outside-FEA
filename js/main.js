@@ -64,7 +64,7 @@ $(document).ready(function () {
 let tl1 = gsap.from('.mid-image-container', {
   duration: 1,
   x: '-40vw',
-  ease: 'linear',
+  ease: Power1.easeOut,
   scrollTrigger: {
     trigger: '.mid-image-container',
     markers: true,
@@ -76,7 +76,7 @@ let tl1 = gsap.from('.mid-image-container', {
 let tl2 = gsap.from('.last-image-container', {
   duration: 1,
   x: '40vw',
-  ease: 'linear',
+  ease: Power1.easeOut,
   scrollTrigger: {
     trigger: '.last-image-container',
     markers: true,
