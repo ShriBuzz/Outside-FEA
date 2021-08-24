@@ -414,6 +414,12 @@ input[type='number'] {
   background-color: #ffd7b4;
 }
 
+.nav-bg {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #ffd7b4;
+}
+
 .nav-padding-remove {
   padding-bottom: 0 !important;
 }
@@ -499,7 +505,7 @@ input[type='number'] {
 }
 
 .nav-listing {
-  margin-top: 8%;
+  margin-top: 14px;
 }
 
 .nav-listing .nav-item {
@@ -674,6 +680,18 @@ input[type='number'] {
   }
 }
 
+.play-btn::after {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  z-index: 11;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid black;
+  border-bottom: 50px solid transparent;
+}
+
 .card-view {
   width: 175px !important;
   height: 196px !important;
@@ -725,6 +743,7 @@ input[type='number'] {
   -ms-grid-rows: 1.5fr 1fr;
       grid-template-rows: 1.5fr 1fr;
   cursor: pointer;
+  position: relative;
   background-color: transparent;
 }
 
@@ -817,6 +836,7 @@ input[type='number'] {
   min-width: 202px;
   min-height: 134px;
   background-color: #000;
+  position: relative;
 }
 
 @media (min-width: 992px) {

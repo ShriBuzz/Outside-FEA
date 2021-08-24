@@ -15,20 +15,20 @@ window.addEventListener(
   true
 );
 
-$('.nav-menu').click(function () {
+$('.navbar-toggler').click(function () {
   $('.navbar').toggleClass('nav-collapse-open nav-padding-remove');
 });
 
 $window.scroll(function () {
   if ($window.scrollTop() > distance) {
-    $('.navbar').addClass('nav-collapse-open');
+    $('.navbar').addClass('nav-bg');
   } else {
     if (
       $('#hoverNav').hasClass('hover-active') ||
-      $('.nav-menu').hasClass('nav-collapse-open')
+      $('.navbar').hasClass('nav-collapse-open')
     ) {
       return;
-    } else $('.navbar').removeClass('nav-collapse-open');
+    } else $('.navbar').removeClass('nav-collapse-open nav-bg');
   }
 });
 
