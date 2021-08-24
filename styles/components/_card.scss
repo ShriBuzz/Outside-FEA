@@ -23,6 +23,30 @@
   }
 }
 
+.play-btn {
+  position: relative !important;
+}
+
+.play-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 11;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 30px solid $primary;
+  border-bottom: 20px solid transparent;
+  @include mq(lg) {
+    bottom: 28px;
+    left: 28px;
+    border-top: 32px solid transparent;
+    border-left: 57px solid $primary;
+    border-bottom: 32px solid transparent;
+  }
+}
+
 .card-view {
   width: 175px !important;
   height: 196px !important;
@@ -58,6 +82,7 @@
   display: grid;
   grid-template-rows: 1.5fr 1fr;
   cursor: pointer;
+  position: relative;
   background-color: transparent;
   @include mq(md) {
     width: 30.5% !important;
@@ -127,6 +152,7 @@
   min-width: 202px;
   min-height: 134px;
   background-color: $black;
+  position: relative;
   @include mq(lg) {
     border: 12px solid $black;
   }

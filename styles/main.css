@@ -680,16 +680,31 @@ input[type='number'] {
   }
 }
 
+.play-btn {
+  position: relative !important;
+}
+
 .play-btn::after {
+  content: '';
   position: absolute;
-  bottom: 28px;
-  left: 28px;
+  bottom: 12px;
+  left: 12px;
   z-index: 11;
   width: 0;
   height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid black;
-  border-bottom: 50px solid transparent;
+  border-top: 20px solid transparent;
+  border-left: 30px solid #efe1d4;
+  border-bottom: 20px solid transparent;
+}
+
+@media (min-width: 992px) {
+  .play-btn::after {
+    bottom: 28px;
+    left: 28px;
+    border-top: 32px solid transparent;
+    border-left: 57px solid #efe1d4;
+    border-bottom: 32px solid transparent;
+  }
 }
 
 .card-view {
