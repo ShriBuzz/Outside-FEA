@@ -19,13 +19,13 @@
   @include mq(lg) {
     .mid-watermark-position {
       left: 154px;
-      height: 205px;
     }
   }
   @include mq(xl) {
     padding: 280px 120px 120px 120px;
     .mid-watermark-position {
-      top: 18vh;
+      top: 16vh;
+      height: 14vw;
     }
   }
 }

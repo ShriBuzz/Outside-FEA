@@ -483,6 +483,10 @@ input[type='number'] {
 .nav-action {
   font-size: 14px;
   font-family: 'sunset-gothic-bold-pro';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  color: #000;
   cursor: pointer;
 }
 
@@ -712,12 +716,12 @@ input[type='number'] {
 }
 
 .empty-card-view .empty-image-container {
-  border-top: 10px solid;
+  border-top: 12px solid;
 }
 
 .card-view-secondary {
   width: 202px !important;
-  height: 196px !important;
+  height: 248px !important;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1.5fr 1fr;
@@ -750,13 +754,26 @@ input[type='number'] {
 .card-view-secondary:hover .empty-image-container {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border-top: 10px solid #efe1d4;
+  border-top: 6px solid #efe1d4;
+}
+
+@media (min-width: 992px) {
+  .card-view-secondary:hover .empty-image-container {
+    border-top: 12px solid #efe1d4;
+  }
 }
 
 .card-view-secondary:hover .card-image-container {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border: 12px solid #efe1d4;
+  border: 6px solid #efe1d4;
+  background-color: #efe1d4;
+}
+
+@media (min-width: 992px) {
+  .card-view-secondary:hover .card-image-container {
+    border: 12px solid #efe1d4;
+  }
 }
 
 .card-view:hover {
@@ -798,7 +815,16 @@ input[type='number'] {
 }
 
 .card-image-container-border {
-  border: 12px solid black;
+  border: 6px solid #000;
+  min-width: 202px;
+  min-height: 134px;
+  background-color: #000;
+}
+
+@media (min-width: 992px) {
+  .card-image-container-border {
+    border: 12px solid #000;
+  }
 }
 
 .card-info-container {
@@ -830,6 +856,7 @@ input[type='number'] {
 
 .card-info-container .time-ago {
   text-transform: uppercase;
+  font-size: 10px;
 }
 
 @media (min-width: 768px) {
@@ -841,6 +868,9 @@ input[type='number'] {
     padding: 6px 6px 4px;
     font-size: 14px;
     height: 21px;
+  }
+  .card-info-container .time-ago {
+    font-size: 14px;
   }
 }
 
@@ -1086,7 +1116,6 @@ input[type='number'] {
 @media (min-width: 992px) {
   .mid-section .mid-watermark-position {
     left: 154px;
-    height: 205px;
   }
 }
 
@@ -1095,7 +1124,8 @@ input[type='number'] {
     padding: 280px 120px 120px 120px;
   }
   .mid-section .mid-watermark-position {
-    top: 18vh;
+    top: 16vh;
+    height: 14vw;
   }
 }
 
@@ -1185,12 +1215,15 @@ h3, .h3 {
 
 .description {
   font-size: 16px;
+  color: #000;
   margin: 0;
+  margin-top: 10px;
 }
 
 @media (min-width: 992px) {
   .description {
     font-size: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -1203,10 +1236,20 @@ h3, .h3 {
 .description-lg {
   font-size: 24px;
   line-height: 24px;
+  color: #000;
   margin: 0;
+  margin-top: 10px;
 }
 
 @media (min-width: 992px) {
+  .description-lg {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
   .description-lg {
     font-size: 47px;
     line-height: 47px;
