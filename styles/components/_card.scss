@@ -48,13 +48,13 @@
   display: grid;
   grid-template-rows: 0.1fr !important;
   .empty-image-container {
-    border-top: 10px solid;
+    border-top: 12px solid;
   }
 }
 
 .card-view-secondary {
   width: 202px !important;
-  height: 196px !important;
+  height: 248px !important;
   display: grid;
   grid-template-rows: 1.5fr 1fr;
   cursor: pointer;
@@ -76,11 +76,18 @@
 .card-view-secondary:hover {
   .empty-image-container {
     transition: all 0.3s ease-in-out;
-    border-top: 10px solid $primary;
+    border-top: 6px solid $primary;
+    @include mq(lg) {
+      border-top: 12px solid $primary;
+    }
   }
   .card-image-container {
     transition: all 0.3s ease-in-out;
-    border: 12px solid $primary;
+    border: 6px solid $primary;
+    background-color: $primary;
+    @include mq(lg) {
+      border: 12px solid $primary;
+    }
   }
 }
 
@@ -116,7 +123,13 @@
 }
 
 .card-image-container-border {
-  border: 12px solid black;
+  border: 6px solid $black;
+  min-width: 202px;
+  min-height: 134px;
+  background-color: $black;
+  @include mq(lg) {
+    border: 12px solid $black;
+  }
 }
 
 .card-info-container {
@@ -134,6 +147,7 @@
   }
   .time-ago {
     text-transform: uppercase;
+    font-size: $xs;
   }
   @include mq(md) {
     grid-gap: 12px;
@@ -142,6 +156,9 @@
       padding: 6px 6px 4px;
       font-size: $text-sm;
       height: 21px;
+    }
+    .time-ago {
+      font-size: $text-sm;
     }
   }
 }
